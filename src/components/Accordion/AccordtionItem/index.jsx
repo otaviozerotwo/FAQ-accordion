@@ -10,11 +10,13 @@ const AccordionItem = ({ title, content, isOpen, onToggle }) => {
           <img className='h-8 w-8' src={!isOpen ? iconPlus : iconMinus} alt="" />
         </button>
       </div>
-      {isOpen && (
-        <div>
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+      >
+        <div className='overflow-hidden'>
           <p className='pb-4 text-purple-600'>{content}</p>
         </div>
-      )}
+      </div>
     </div>
   );
 }
