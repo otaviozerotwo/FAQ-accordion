@@ -5,6 +5,7 @@ const AccordionItem = ({ id, title, content, isOpen, onToggle }) => {
   return (
     <div className='border-b-2 border-b-purple-100 last:border-b-0'>
       <button
+        type='button'
         onClick={onToggle}
         className='w-full py-6 flex justify-between items-center gap-4 cursor-pointer'
         aria-controls={`faq-content-${id}`}
